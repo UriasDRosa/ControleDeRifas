@@ -35,7 +35,7 @@ function CriarRifa() {
       console.log(err);
     });
 }
-
+module.exports = CriarRifa();
 function limpar() {
   numRifa.value = "";
   nomeRifa.value = "";
@@ -46,5 +46,6 @@ function limpar() {
 formulario.addEventListener("submit", function (event) {
   event.preventDefault();
   CriarRifa();
+  console.log(CriarRifa())
   limpar();
 });
